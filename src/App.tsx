@@ -1,10 +1,11 @@
-import "./styles.css";
+import Autocomplete from './components/Autocomplete/Autocomplete';
+import './styles.css';
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Pokemon Autocomplete</h1>
+      <Autocomplete placeholder="Type something..." />
     </div>
   );
 }

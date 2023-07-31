@@ -1,0 +1,36 @@
+.Autocomplete__container {
+  position: relative;
+  text-align: left;
+}
+
+.Autocomplete__input-container {
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 40px;
+}
+
+.Autocomplete__suggestion {
+  color: #757575;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  position: absolute;
+}
+
+.Autocomplete__input {
+  border: none;
+  outline: none;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+}
+
+.Autocomplete__list {
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 1rem 1rem 1rem 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 2.5rem;
+}
