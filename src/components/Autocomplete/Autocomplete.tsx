@@ -1,8 +1,9 @@
 import { ChangeEvent, KeyboardEvent, useRef, useState } from 'react';
-
-import './Autocomplete.css';
-import useAutocomplete from './useAutocomplete';
 import classNames from 'classnames';
+import useAutocomplete from './useAutocomplete';
+
+import Icon from '../../assets/magnifying-glass-solid.svg';
+import './Autocomplete.css';
 
 interface AutocompleteProps {
   placeholder?: string;
@@ -60,23 +61,26 @@ const Autocomplete = ({
   return (
     <div className="Autocomplete__container">
       <div
-        className="Autocomplete__input-container"
+        className="Autocomplete__search-container"
         onClick={() => inputRef.current?.focus()}
       >
-        {primarySuggestion && (
-          <div className="Autocomplete__suggestion">
-            {value + primarySuggestion}
-          </div>
-        )}
-        <input
-          type="text"
-          className="Autocomplete__input"
-          placeholder={placeholder}
-          value={value}
-          onChange={handleInputChange}
-          onKeyDown={handleInputKeyDown}
-          ref={inputRef}
-        />
+        <img src={Icon} className="Autocomplete__icon" />
+        <div className="Autocomplete__input-container">
+          {primarySuggestion && (
+            <div className="Autocomplete__suggestion">
+              {value + primarySuggestion}
+            </div>
+          )}
+          <input
+            type="text"
+            className="Autocomplete__input"
+            placeholder={placeholder}
+            value={value}
+            onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
+            ref={inputRef}
+          />
+        </div>
       </div>
       {suggestions.length ? (
         <ul className="Autocomplete__list">

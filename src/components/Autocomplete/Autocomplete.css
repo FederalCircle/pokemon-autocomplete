@@ -3,11 +3,25 @@
   text-align: left;
 }
 
-.Autocomplete__input-container {
+.Autocomplete__search-container {
   padding: 1rem;
   border: 1px solid gray;
   border-radius: 40px;
   cursor: text;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Autocomplete__icon {
+  width: 1rem;
+}
+
+.Autocomplete__input-container {
+  flex: 1;
+  position: relative;
 }
 
 .Autocomplete__suggestion {
@@ -20,6 +34,7 @@
 
 .Autocomplete__input {
   font-size: 100%;
+  width: 100%;
   padding: 0;
   border: none;
   outline: none;
@@ -29,14 +44,21 @@
 
 .Autocomplete__list {
   border: 1px solid gray;
-  border-radius: 12px;
-  padding: 1rem 1rem 1rem 40px;
+  border-radius: 0 0 12px 12px;
+  padding: 2.2rem 0 1rem;
   position: absolute;
   right: 0;
   left: 0;
-  top: 2.5rem;
+  margin: 0;
+  top: 50%;
+  background-color: #fff;
+  list-style: none;
+}
+
+.Autocomplete__item {
+  padding: 8px 40px;
 }
 
 .Autocomplete__item--selected {
-  color: red;
+  background-color: #f2f2f2;
 }

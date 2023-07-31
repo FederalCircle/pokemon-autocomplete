@@ -10,6 +10,16 @@ body {
   overflow: hidden;
 }
 
+body {
+  width: 100%;
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: bottom;
+}
+
 .App {
   text-align: center;
+  padding: 3rem;
+  background: rgba(247, 247, 247, 0.6);
+  border-radius: 1rem;
 }

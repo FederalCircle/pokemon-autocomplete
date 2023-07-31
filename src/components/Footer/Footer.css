@@ -1,0 +1,9 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  font-size: 12px;
+}
