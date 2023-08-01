@@ -13,7 +13,7 @@ const useAutocomplete = (initialValue: string, options: string[]) => {
   };
 
   const updateSuggestions = (newValue: string) => {
-    const newSuggestions = findSuggestions(newValue, options);
+    const newSuggestions = findSuggestions(newValue, options, 5);
     if (newSuggestions[0]) {
       setPrimarySuggestion(newSuggestions[0]);
       setSuggestions(newSuggestions);

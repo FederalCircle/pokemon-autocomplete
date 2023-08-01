@@ -5,7 +5,7 @@ import useAutocomplete from './useAutocomplete';
 import Icon from '../../assets/magnifying-glass-solid.svg';
 import './Autocomplete.css';
 
-interface AutocompleteProps {
+export interface AutocompleteProps {
   placeholder?: string;
   value?: string;
   onChange?: (newValue: string) => void;
@@ -72,9 +72,12 @@ const Autocomplete = ({
         <img src={Icon} className="Autocomplete__icon" />
         <div className="Autocomplete__input-container">
           {primarySuggestion && (
-            <div className="Autocomplete__suggestion">
+            <span
+              className="Autocomplete__suggestion"
+              data-testid="inline-suggestion"
+            >
               {value + primarySuggestion}
-            </div>
+            </span>
           )}
           <input
             type="text"
