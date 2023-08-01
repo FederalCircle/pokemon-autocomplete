@@ -19,6 +19,9 @@ body {
 
 .App {
   text-align: center;
+}
+
+.App__card {
   padding: 3rem;
   background: rgba(247, 247, 247, 0.6);
   border-radius: 1rem;

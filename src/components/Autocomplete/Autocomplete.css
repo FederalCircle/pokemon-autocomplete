@@ -57,8 +57,10 @@
 
 .Autocomplete__item {
   padding: 8px 40px;
+  cursor: pointer;
 }
 
+.Autocomplete__item:hover,
 .Autocomplete__item--selected {
   background-color: #f2f2f2;
 }

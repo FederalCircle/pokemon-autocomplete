@@ -29,13 +29,13 @@ const Autocomplete = ({
     decrementSelectedIndex,
   } = useAutocomplete(value, options);
 
-  const handleInputChange = async (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     onChange(value);
     updateSuggestions(value);
   };
 
-  const handleInputKeyDown = async (e: KeyboardEvent<HTMLInputElement>) => {
+  const handleInputKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     const { value, selectionStart } = e.currentTarget;
     switch (e.key) {
       case 'ArrowRight':
@@ -56,6 +56,11 @@ const Autocomplete = ({
         decrementSelectedIndex();
         break;
     }
+  };
+
+  const handleItemClick = (suggestion: string) => {
+    onChange(value + suggestion);
+    resetSuggestions();
   };
 
   return (
@@ -90,6 +95,7 @@ const Autocomplete = ({
               className={classNames('Autocomplete__item', {
                 'Autocomplete__item--selected': selectedIndex === index,
               })}
+              onClick={() => handleItemClick(suggestion)}
             >
               {value}
               <strong>{suggestion}</strong>
