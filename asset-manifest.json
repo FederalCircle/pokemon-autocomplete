@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pokemon-autocomplete/static/css/main.26817440.css",
+    "main.js": "/pokemon-autocomplete/static/js/main.1991d747.js",
+    "static/media/background.png": "/pokemon-autocomplete/static/media/background.453f6beaee6dd6933912.png",
+    "static/media/pokemon_logo.png": "/pokemon-autocomplete/static/media/pokemon_logo.9e1438b42dc1c6057240.png",
+    "index.html": "/pokemon-autocomplete/index.html",
+    "static/media/magnifying-glass-solid.svg": "/pokemon-autocomplete/static/media/magnifying-glass-solid.819dbf4f84c4cdd2721389d558571a86.svg",
+    "main.26817440.css.map": "/pokemon-autocomplete/static/css/main.26817440.css.map",
+    "main.1991d747.js.map": "/pokemon-autocomplete/static/js/main.1991d747.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26817440.css",
+    "static/js/main.1991d747.js"
+  ]
+}
