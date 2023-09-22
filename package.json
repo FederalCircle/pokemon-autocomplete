@@ -1,7 +1,8 @@
 {
-  "name": "deel-frontend-test",
+  "name": "pokemon-autocomplete",
   "version": "1.0.0",
-  "description": "Frontend test for Deel's technical assignment",
+  "description": "Pokemon Autocomplete is a simple React app that suggests Pokemon names from the first generation as you type.",
+  "homepage": "https://federalcircle.github.io/pokemon-autocomplete/",
   "author": {
     "name": "Alyson Maia",
     "email": "alyson.maia@gmail.com"
@@ -25,6 +26,7 @@
     "@types/jest": "^29.5.3",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "gh-pages": "^6.0.0",
     "prettier": "^3.0.0",
     "typescript": "4.4.2"
   },
@@ -32,7 +34,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
